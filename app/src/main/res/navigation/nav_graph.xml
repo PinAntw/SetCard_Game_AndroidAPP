@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gameboard_frag">
+    <fragment
+        android:id="@+id/gameboard_frag"
+        android:name="tw.edu.ncku.an.setcard_game.GameBoard_frag"
+        android:label="cardGridFragment" >
+        <action
+            android:id="@+id/action_gameboard_frag_to_history_frag"
+            app:destination="@id/history_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/history_frag"
+        android:name="tw.edu.ncku.an.setcard_game.History_frag"
+        android:label="resultGridFragment" >
+        <action
+            android:id="@+id/action_resultGridFragment_to_cardGridFragment"
+            app:destination="@id/gameboard_frag" />
+    </fragment>
+
+</navigation>
